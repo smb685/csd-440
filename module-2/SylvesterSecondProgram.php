@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!--
-    File:        ClaudeTable2.php
-    Author:      Claude
+    File:        SylvesterSecondTable.php
+    Author:      Sylvester
     Date:        March 31, 2026
     Description: Generates an HTML table of random numbers using PHP nested
                  loop structures. The outer loop creates rows and the inner
@@ -13,7 +13,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ClaudeTable2 – Random Number Table</title>
+    <title>SylvesterTable2 – Random Number Table</title>
     <style>
         body {
             font-family: Arial, sans-serif;
