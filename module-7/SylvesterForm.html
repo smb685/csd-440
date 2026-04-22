@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Entry Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #f4f4f9;
+        }
+        .form-container {
+            background: white;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        label {
+            display: inline-block;
+            width: 140px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+        input, select {
+            width: 250px;
+            padding: 6px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-left: 145px;
+            margin-top: -10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-left: 145px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        .note {
+            font-size: 0.8em;
+            color: #666;
+            margin-top: 15px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Personal Information Form</h1>
+        <form action="SylvesterResponse.php" method="post">
+            <!-- Text field (string) -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required>
+            <br>
+
+            <!-- Email (string, but special format) -->
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+            <br>
+
+            <!-- Integer (age) -->
+            <label for="age">Age (integer):</label>
+            <input type="number" id="age" name="age" step="1" required>
+            <br>
+
+            <!-- Float/decimal (salary) -->
+            <label for="salary">Monthly Salary (USD):</label>
+            <input type="number" id="salary" name="salary" step="0.01" required>
+            <br>
+
+            <!-- Date (date type) -->
+            <label for="birthdate">Birth Date:</label>
+            <input type="date" id="birthdate" name="birthdate" required>
+            <br>
+
+            <!-- Select dropdown (string from choices) -->
+            <label for="department">Department:</label>
+            <select id="department" name="department" required>
+                <option value="">-- Select --</option>
+                <option value="Engineering">Engineering</option>
+                <option value="Sales">Sales</option>
+                <option value="Marketing">Marketing</option>
+                <option value="HR">Human Resources</option>
+            </select>
+            <br>
+
+            <!-- Radio buttons (string) -->
+            <label for="shift">Work Shift:</label>
+            <input type="radio" id="morning" name="shift" value="Morning" required>
+            <label for="morning" style="width:auto">Morning</label>
+            <input type="radio" id="evening" name="shift" value="Evening">
+            <label for="evening" style="width:auto">Evening</label>
+            <input type="radio" id="night" name="shift" value="Night">
+            <label for="night" style="width:auto">Night</label>
+            <br>
+            <br>
+
+            <button type="submit">Submit Form</button>
+        </form>
+        <div class="note">
+            * All fields are required. Age must be integer, Salary can be decimal.
+        </div>
+    </div>
+</body>
+</html>
